@@ -57,6 +57,7 @@ __________
     workflow.rst
     python_language.rst
     control_flow.rst
+    functions.rst
 
 .. raw:: latex
 
