@@ -168,7 +168,7 @@ Dictionaries are a mapping between keys and values:
 .. warning:: Keys are not ordered
 
 More collection types
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 * Sets: non ordered, unique items:
 
@@ -211,45 +211,6 @@ More collection types
     
     TypeError: 'tuple' object does not support item assignment
     
-
-Flow control
-=============
-
-if/else
---------
-
-::
-  
-    if 2**2 == 4:
-	print 'Totology'
-
-**Blocks are delimited by indentation**
-
-::
-
-    a = 1
-    if a == 1:
-	print 1
-    elif a == 2:
-	print 2
-    else:
-	print 'A lot'
-
-for/range
-----------
-
-Iterating with an index::
-
-    for i in range(10):
-	print i
-
-But most often, it is more readable to iterate over values::
-
-    for word in ('cool', 'powerful', 'readable'):
-	print 'Python is', word
-
-while/break/continue
----------------------
 
 Functions
 ==========
