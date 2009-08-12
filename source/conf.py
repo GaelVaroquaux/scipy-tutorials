@@ -22,12 +22,14 @@ sys.path.append(os.path.abspath('sphinxext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 
-        #'matplotlib.sphinxext.plot_directive', 
-        'plot_directive',
-        'ipython_console_highlighting',
-        'matplotlib.sphinxext.only_directives',
-        ]#'sphinx.ext.intersphinx']
+extensions = ['sphinx.ext.autodoc', 
+              'sphinx.ext.doctest', 
+              'sphinx.ext.todo',
+              #'matplotlib.sphinxext.plot_directive', 
+              'plot_directive',
+              'ipython_console_highlighting',
+              'matplotlib.sphinxext.only_directives',
+              ] #'sphinx.ext.intersphinx']
 
 doctest_test_doctest_blocks = 'true'
 
@@ -90,9 +92,15 @@ exclude_trees = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
+# Flag to show todo items in rendered output
+todo_include_todos = True
 
 # Options for HTML output
 # -----------------------
+
+# The theme to use for HTML and HTML Help pages.  Major themes that come with
+# Sphinx are currently 'default' and 'sphinxdoc'.
+html_theme = 'sphinxdoc'
 
 # The style sheet to use for HTML and HTML Help pages. A file of that name
 # must exist either in Sphinx' static/ path, or in one of the custom paths

@@ -80,7 +80,11 @@ Typical C-style while loop:
     cool
     POWERFUL
 
-*continue* the next iteration of a loop:
+*continue* the next iteration of a loop.
+
+.. todo:: 
+   
+   Add continue example.
 
 Conditional Expressions
 -----------------------
