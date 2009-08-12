@@ -14,12 +14,66 @@ Define a function:
     In [57]: foo()
     in foo function
 
+Parameters
+----------
+Two kinds of parameters:
 
-Functions are first-class objects: 
-  * can be bound to a value 
-  * an item in a list
-  * passed as an argument to another function.
+1) Mandatory parameters (positional arguments)
 
+.. sourcecode:: ipython
+
+    In [81]: def double_it(x):
+       ....:     return x * 2
+       ....: 
+
+    In [82]: double_it(3)
+    Out[82]: 6
+
+    In [83]: double_it(['scipy', 2009])
+    Out[83]: ['scipy', 2009, 'scipy', 2009]
+   
+
+2) Optional parameters (keyword or named arguments)
+
+.. sourcecode:: ipython
+
+    In [84]: def double_it(x=2):
+       ....:     return x * 2
+       ....: 
+
+    In [85]: double_it()
+    Out[85]: 4
+
+    In [86]: double_it(3)
+    Out[86]: 6
+
+Keyword arguments allow you to specify *default values*:
+
+.. sourcecode:: ipython
+
+    In [98]: def slicer(seq, start=None, stop=None, step=None):
+       ....:     """Implement basic python slicing."""
+       ....:     return seq[start:stop:step]
+       ....: 
+
+    In [101]: seq = 'one fish, two fish, red fish, blue fish'.split()
+
+    In [105]: seq
+    Out[105]: ['one', 'fish,', 'two', 'fish,', 'red', 'fish,', 'blue', 'fish']
+
+    In [102]: slicer(seq, step=2)
+    Out[102]: ['one', 'two', 'red', 'blue']
+
+    In [103]: slicer(seq, 1, step=2)
+    Out[103]: ['fish,', 'fish,', 'fish,', 'fish']
+
+    In [104]: slicer(seq, start=1, stop=len(seq), step=2)
+    Out[104]: ['fish,', 'fish,', 'fish,', 'fish']
+
+
+
+Pass-by-value
+~~~~~~~~~~~~~
 Function parameters are local variables of the function.  Can
 reference global variables within the function but global variables
 cannot be assigned a value unless declared **global**.
@@ -75,4 +129,19 @@ convention:
 
         Extended summary which can contain multiple paragraphs.
 
+
+Functions are objects
+---------------------
+Functions are first-class objects, which means they can:
+  * be assigned to a variable
+  * be an item in a list (or any collection)
+  * be passed as an argument to another function.
+
+
+Namespaces
+----------
+
+
+global statement
+----------------
 
