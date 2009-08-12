@@ -70,22 +70,66 @@ Keyword arguments allow you to specify *default values*:
     In [104]: slicer(seq, start=1, stop=len(seq), step=2)
     Out[104]: ['fish,', 'fish,', 'fish,', 'fish']
 
-
-
-Pass-by-value
-~~~~~~~~~~~~~
-Function parameters are local variables of the function.  Can
-reference global variables within the function but global variables
-cannot be assigned a value unless declared **global**.
-
-
-mandatory parameters vs. optional parameters (with default values)
-
 .. warning:: 
 
    Default values are evaluated when the function is defined, not when
    it is called.
 
+Pass-by-value
+-------------
+
+Function parameters are local variables of the function.  Global
+variables can be referenced within the function:
+
+.. sourcecode:: ipython
+
+    In [114]: x = 5
+
+    In [115]: def addx(y):
+       .....:     return x + y
+       .....: 
+
+    In [116]: addx(10)
+    Out[116]: 15
+
+But global variables cannot be assigned a value unless declared **global**.
+
+Doesn't work:
+
+.. sourcecode:: ipython
+
+    In [117]: def setx(y):
+       .....:     x = y
+       .....:     print x
+       .....:     
+       .....:     
+
+    In [118]: setx(10)
+    10
+
+    In [120]: x
+    Out[120]: 5
+
+Works:
+
+.. sourcecode:: ipython
+
+    In [121]: def setx(y):
+       .....:     global x
+       .....:     x = y
+       .....:     print x
+       .....:     
+       .....:     
+
+    In [122]: setx(10)
+    10
+
+    In [123]: x
+    Out[123]: 10
+
+
+Variable number of parameters
+-----------------------------
 Special forms of parameters:
   * \*args: any number of positional arguments packed into a tuple
   * \**kwargs: any number of keyword arguments packed into a dictionary
