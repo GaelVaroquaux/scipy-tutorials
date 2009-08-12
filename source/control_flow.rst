@@ -141,7 +141,24 @@ But Python provides **enumerate** for this:
     1 powerful
     2 readable
 
-Looping over a dictionary, use *iteritems*.
+Looping over a dictionary, use **iteritems**:
 
-Looping over a sequence and want index and value use *enumerate*.
+.. sourcecode:: ipython
+
+    In [54]: d = {'a': 1, 'b':1.2, 'c':1j}
+
+    In [55]: for key, val in d.iteritems():
+       ....:     print 'Key:', key, 'has value:', val
+       ....:     
+       ....:     
+    Key: a has value: 1
+    Key: c has value: 1j
+    Key: b has value: 1.2
+
+List Comprehensions
+-------------------
+
+.. todo::
+
+   Do we want to introduce list comprehensions?
 
