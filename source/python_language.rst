@@ -142,10 +142,10 @@ Lists
     
     Lists are mutable types: `r.sort` modifies in place `r`.
 
-Dictionnaries
-~~~~~~~~~~~~~~
+Dictionaries
+~~~~~~~~~~~~
 
-Dictionnaries are a mapping between keys and values:
+Dictionaries are a mapping between keys and values:
 
   .. sourcecode:: ipython
 
