@@ -110,15 +110,32 @@ You can iterate over any sequence (string, list, dictionary, file, ...)
 
 .. warning:: Not safe to modify the sequence you are iterating over.
 
+Common task is to iterate over a sequence while keeping track of the
+item number.
 
-Iterate over a list while keeping track of the item number:
+Could use while loop with a counter as above. Or a for loop:
 
-while loop with a counter
+.. sourcecode:: ipython
 
-for loop
+    In [52]: for i in range(0, len(words)):
+       ....:     print i, words[i]
+       ....:     
+       ....:     
+    0 cool
+    1 powerful
+    2 readable
 
-enumerate
+But Python provides **enumerate** for this:
 
+.. sourcecode:: ipython
+
+    In [53]: for i, item in enumerate(words):
+       ....:     print i, item
+       ....:     
+       ....:     
+    0 cool
+    1 powerful
+    2 readable
 
 Looping over a dictionary, use *iteritems*.
 
