@@ -47,7 +47,27 @@ Two kinds of parameters:
     In [86]: double_it(3)
     Out[86]: 6
 
-Keyword arguments allow you to specify *default values*:
+Keyword arguments allow you to specify *default values*.
+
+.. warning:: 
+
+   Default values are evaluated when the function is defined, not when
+   it is called.
+
+.. sourcecode:: ipython
+
+    In [124]: bigx = 10
+
+    In [125]: def double_it(x=bigx):
+       .....:     return x * 2
+       .....: 
+
+    In [126]: bigx = 1e9  # No big
+
+    In [128]: double_it()
+    Out[128]: 20
+
+More involved example implementing python's slicing:
 
 .. sourcecode:: ipython
 
@@ -70,16 +90,45 @@ Keyword arguments allow you to specify *default values*:
     In [104]: slicer(seq, start=1, stop=len(seq), step=2)
     Out[104]: ['fish,', 'fish,', 'fish,', 'fish']
 
-.. warning:: 
 
-   Default values are evaluated when the function is defined, not when
-   it is called.
+Passed by value
+---------------
 
-Pass-by-value
--------------
+Parameters to functions are passed by value.
 
-Function parameters are local variables of the function.  Global
-variables can be referenced within the function:
+When you pass a variable to a function, python passes the object to
+which the variable refers (the **value**).  Not the variable itself.
+
+If the **value** is immutable, the function does not modify the
+caller's variable.  If the **value** is mutable, the function modifies
+the caller's variable.
+
+.. sourcecode:: ipython
+
+    In [1]: def foo(x, y):
+       ...:     x = 23
+       ...:     y.append(42)
+       ...:     
+       ...:     
+
+    In [2]: a = 77    # immutable variable
+
+    In [3]: b = [99]  # mutable variable
+
+    In [4]: foo(a, b)
+
+    In [5]: print a, b    # mutable variable 'b' was modified
+    77 [99, 42]
+
+Functions have a local variable table. (scope)
+
+The line ``x = 23``.  ``x`` only exists within the function.
+
+
+Global variables
+----------------
+
+Global variables can be referenced within the function:
 
 .. sourcecode:: ipython
 
@@ -184,8 +233,4 @@ Functions are first-class objects, which means they can:
 
 Namespaces
 ----------
-
-
-global statement
-----------------
 
