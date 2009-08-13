@@ -2,7 +2,8 @@
 Introduction to the Python language (Functions)
 ===============================================
 
-Define a function:
+Function definition
+-------------------
 
 .. sourcecode:: ipython
 
@@ -76,19 +77,22 @@ More involved example implementing python's slicing:
        ....:     return seq[start:stop:step]
        ....: 
 
-    In [101]: seq = 'one fish, two fish, red fish, blue fish'.split()
+    In [101]: seuss = 'one fish, two fish, red fish, blue fish'.split()
 
-    In [105]: seq
-    Out[105]: ['one', 'fish,', 'two', 'fish,', 'red', 'fish,', 'blue', 'fish']
+    In [102]: seuss
+    Out[102]: ['one', 'fish,', 'two', 'fish,', 'red', 'fish,', 'blue', 'fish']
 
-    In [102]: slicer(seq, step=2)
-    Out[102]: ['one', 'two', 'red', 'blue']
+    In [103]: slicer(seuss)
+    Out[103]: ['one', 'fish,', 'two', 'fish,', 'red', 'fish,', 'blue', 'fish']
 
-    In [103]: slicer(seq, 1, step=2)
-    Out[103]: ['fish,', 'fish,', 'fish,', 'fish']
+    In [104]: slicer(seuss, step=2)
+    Out[104]: ['one', 'two', 'red', 'blue']
 
-    In [104]: slicer(seq, start=1, stop=len(seq), step=2)
-    Out[104]: ['fish,', 'fish,', 'fish,', 'fish']
+    In [105]: slicer(seuss, 1, step=2)
+    Out[105]: ['fish,', 'fish,', 'fish,', 'fish']
+
+    In [106]: slicer(seuss, start=1, stop=4, step=2)
+    Out[106]: ['fish,', 'fish,']
 
 
 Passed by value
@@ -108,7 +112,8 @@ the caller's variable.
     In [1]: def foo(x, y):
        ...:     x = 23
        ...:     y.append(42)
-       ...:     
+       ...:	print 'x is', x
+       ...:	print 'y is', y
        ...:     
 
     In [2]: a = 77    # immutable variable
@@ -116,13 +121,18 @@ the caller's variable.
     In [3]: b = [99]  # mutable variable
 
     In [4]: foo(a, b)
+    x is 23
+    y is [99, 42]
 
-    In [5]: print a, b    # mutable variable 'b' was modified
-    77 [99, 42]
+    In [5]: print a
+    77
 
-Functions have a local variable table. (scope)
+    In [6]: print b    # mutable variable 'b' was modified
+    [99, 42]
 
-The line ``x = 23``.  ``x`` only exists within the function.
+Functions have a local variable table. Called a *local namespace*.
+
+The variable ``x`` only exists within the function *foo*.
 
 
 Global variables
@@ -141,7 +151,8 @@ Global variables can be referenced within the function:
     In [116]: addx(10)
     Out[116]: 15
 
-But global variables cannot be assigned a value unless declared **global**.
+But global variables cannot be modified within the function, unless
+declared **global** in the function.
 
 Doesn't work:
 
