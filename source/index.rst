@@ -58,6 +58,7 @@ __________
     python_language.rst
     control_flow.rst
     functions.rst
+    file_io.rst
 
 .. raw:: latex
 
