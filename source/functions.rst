@@ -211,6 +211,16 @@ Special forms of parameters:
   * \*args: any number of positional arguments packed into a tuple
   * \**kwargs: any number of keyword arguments packed into a dictionary
 
+.. sourcecode:: ipython
+
+    In [35]: def variable_args(*args, **kwargs):
+       ....:     print 'args is', args
+       ....:     print 'kwargs is', kwargs
+       ....: 
+
+    In [36]: variable_args('one', 'two', x=1, y=2, z=3)
+    args is ('one', 'two')
+    kwargs is {'y': 2, 'x': 1, 'z': 3}
 
 
 Docstrings
@@ -244,7 +254,15 @@ convention:
 
 Functions are objects
 ---------------------
-Functions are first-class objects, which means they can:
-  * be assigned to a variable
-  * be an item in a list (or any collection)
-  * be passed as an argument to another function.
+Functions are first-class objects, which means they can be:
+  * assigned to a variable
+  * an item in a list (or any collection)
+  * passed as an argument to another function.
+
+.. sourcecode:: ipython
+
+    In [38]: va = variable_args
+
+    In [39]: va('three', x=1, y=2)
+    args is ('three',)
+    kwargs is {'y': 2, 'x': 1}
