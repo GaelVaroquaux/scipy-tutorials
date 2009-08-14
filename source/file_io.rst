@@ -2,7 +2,10 @@
 Introduction to the Python language (File I/O)
 ==============================================
 
-Use the build-in function ``open`` to open files:
+Reading from a file
+-------------------
+
+Open a file with the ``open`` function:
 
 .. sourcecode:: ipython
 
@@ -62,6 +65,91 @@ Or we can read the entire file into a list:
 
     In [78]: all_lines[0]
     Out[78]: "GUARD: 'Allo, daffy English kaniggets and Monsieur Arthur-King, who is\n"
+
+Iterate over a file
+-------------------
+
+Files are sequences, we can iterate over them:
+
+.. sourcecode:: ipython
+
+    In [81]: fp = open("datafile.txt")
+
+    In [82]: for line in fp:
+       ....:     print line
+       ....: 
+    GUARD: 'Allo, daffy English kaniggets and Monsieur Arthur-King, who is
+
+          afraid of a duck, you know!  So, we French fellows out-wit you a
+
+          second time!
+
+
+File modes
+----------
+
+* Read-only: ``r``
+* Write-only: ``w``  # Will erase file if it exists or create a new file
+* Append a file: ``a``
+* Read and Write: ``r+``
+* Binary mode: ``b``
+
+Writing to a file
+-----------------
+
+Use the ``write`` method:
+
+.. sourcecode:: ipython
+
+    In [83]: fp = open('newfile.txt', 'w')
+
+    In [84]: fp.write("I am not a tiny-brained wiper of other people's bottoms!")
+
+    In [85]: fp.close()
+
+    In [86]: fp = open('newfile.txt')
+
+    In [87]: fp.read()
+    Out[87]: "I am not a tiny-brained wiper of other people's bottoms!"
+
+Update a file:
+
+.. sourcecode:: ipython
+
+    In [104]: fp = open('newfile.txt', 'r+')
+
+    In [105]: line = fp.read()
+
+    In [111]: line = "CHRIS: " + line + "\n"
+
+    In [112]: line
+    Out[112]: "CHRIS: I am not a tiny-brained wiper of other people's bottoms!\n"
+
+    In [113]: fp.seek(0)
+
+    In [114]: fp.write(line)
+
+    In [115]: fp.tell()
+    Out[115]: 63L
+
+    In [116]: fp.seek(0)
+
+    In [117]: fp.read()
+    Out[117]: "CHRIS: I am not a tiny-brained wiper of other people's bottoms!"
+
+    In [130]: fp.seek(0)
+
+    In [132]: fp.write("GAEL: I've met your children dear sir, yes you are!\n")
+
+    In [136]: fp.seek(0)
+
+    In [137]: fp.readlines()
+    Out[137]: 
+    ["CHRIS: I am not a tiny-brained wiper of other people's bottoms!\n",
+     "GAEL: I've met your children dear sir, yes you are!\n"]
+
+File processing
+---------------
 
 Often want to open the file, grab the data, then close the file:
 
