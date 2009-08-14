@@ -266,3 +266,12 @@ Functions are first-class objects, which means they can be:
     In [39]: va('three', x=1, y=2)
     args is ('three',)
     kwargs is {'y': 2, 'x': 1}
+
+
+Methods
+-------
+
+Functions attached to objects.
+
+.. todo::  Simple introduction to methods
+
