@@ -1,6 +1,5 @@
-===============================================
-Introduction to the Python language (Functions)
-===============================================
+Defining functions
+=====================
 
 Function definition
 -------------------

@@ -1,5 +1,5 @@
 ==============================================
-Introduction to the Python language (File I/O)
+File I/O in Python
 ==============================================
 
 Reading from a file

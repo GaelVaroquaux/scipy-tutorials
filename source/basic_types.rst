@@ -1,7 +1,3 @@
-====================================
-Introduction to the Python language
-====================================
-
 Basic types
 ============
 
@@ -211,19 +207,4 @@ More collection types
     
     TypeError: 'tuple' object does not support item assignment
     
-
-Functions
-==========
-
-# Functions: definitions, arguments, docstrings, ...
-
-Exception handling
-===================
-
-# Exceptions handling in Python
-
-Reusing your code: creating modules
-===================================
-
-# Reusing your code: creating modules, '__main__'.
 
