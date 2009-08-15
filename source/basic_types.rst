@@ -138,6 +138,30 @@ Lists
     
     Lists are mutable types: `r.sort` modifies in place `r`.
 
+.. note:: **Discovering methods:**
+
+    In IPython: tab-completion (press tab)
+
+    .. sourcecode:: ipython
+
+	In [25]: r.
+	r.__add__           r.__iadd__          r.__setattr__
+	r.__class__         r.__imul__          r.__setitem__
+	r.__contains__      r.__init__          r.__setslice__
+	r.__delattr__       r.__iter__          r.__sizeof__
+	r.__delitem__       r.__le__            r.__str__
+	r.__delslice__      r.__len__           r.__subclasshook__
+	r.__doc__           r.__lt__            r.append
+	r.__eq__            r.__mul__           r.count
+	r.__format__        r.__ne__            r.extend
+	r.__ge__            r.__new__           r.index
+	r.__getattribute__  r.__reduce__        r.insert
+	r.__getitem__       r.__reduce_ex__     r.pop
+	r.__getslice__      r.__repr__          r.remove
+	r.__gt__            r.__reversed__      r.reverse
+	r.__hash__          r.__rmul__          r.sort
+
+
 Dictionaries
 ~~~~~~~~~~~~
 
@@ -145,21 +169,21 @@ Dictionaries are a mapping between keys and values:
 
   .. sourcecode:: ipython
 
-    In [25]: d = {'a': 1, 'b':1.2, 'c':1j}
+    In [26]: d = {'a': 1, 'b':1.2, 'c':1j}
 
-    In [26]: d['b']
-    Out[26]: 1.2
+    In [27]: d['b']
+    Out[27]: 1.2
 
-    In [27]: d['d'] = 'd'
+    In [28]: d['d'] = 'd'
 
-    In [28]: d
-    Out[28]: {'a': 1, 'b': 1.2, 'c': 1j, 'd': 'd'}
+    In [29]: d
+    Out[29]: {'a': 1, 'b': 1.2, 'c': 1j, 'd': 'd'}
 
-    In [29]: d.keys()
-    Out[29]: ['a', 'c', 'b', 'd']
+    In [30]: d.keys()
+    Out[30]: ['a', 'c', 'b', 'd']
 
-    In [30]: d.values()
-    Out[30]: [1, 1j, 1.2, 'd']
+    In [31]: d.values()
+    Out[31]: [1, 1j, 1.2, 'd']
 
 .. warning:: Keys are not ordered
 
@@ -170,19 +194,19 @@ More collection types
 
   .. sourcecode:: ipython
 
-    In [31]: s = set(('a', 'b', 'c', 'a'))
+    In [32]: s = set(('a', 'b', 'c', 'a'))
 
-    In [32]: s
-    Out[32]: set(['a', 'b', 'c'])
+    In [33]: s
+    Out[33]: set(['a', 'b', 'c'])
 
-    In [33]: s.difference(('a', 'b'))
-    Out[33]: set(['c'])
+    In [34]: s.difference(('a', 'b'))
+    Out[34]: set(['c'])
 
   Sets cannot be indexed:
 
   .. sourcecode:: ipython
 
-    In [34]: s[1]
+    In [35]: s[1]
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
 
@@ -193,15 +217,15 @@ More collection types
 
   .. sourcecode:: ipython
 
-    In [35]: t = 1, 2
+    In [36]: t = 1, 2
     
-    In [36]: t
-    Out[36]: (1, 2)
+    In [37]: t
+    Out[37]: (1, 2)
     
-    In [37]: t[1]
-    Out[37]: 2
+    In [38]: t[1]
+    Out[38]: 2
     
-    In [38]: t[1] = 2
+    In [39]: t[1] = 2
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
     
