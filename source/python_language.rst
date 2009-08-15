@@ -13,6 +13,7 @@ Introduction to the Python language
     basic_types.rst
     control_flow.rst
     functions.rst
+    exceptions.rst
     reusing.rst
     file_io.rst
 
