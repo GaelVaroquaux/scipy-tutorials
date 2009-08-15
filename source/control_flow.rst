@@ -148,8 +148,8 @@ item number.
 
   .. sourcecode:: ipython
 
-    In [14]: for i, item in enumerate(words):
-       ....:     print i, item
+    In [14]: for index, item in enumerate(words):
+       ....:     print index, item
        ....:     
        ....:     
     0 cool
