@@ -56,10 +56,16 @@ Numbers
     In [11]: float(1)
     Out[11]: 1.
 
+.. topic:: Excercise:
+
+    Compare two approximations of pi: 22/7 and 355/113
+
+    (pi = 3.14159265...)
+
 Collections
 ------------
 
-Collections: list, dictionaries (and tuples, sets, ...)
+Collections: list, dictionaries (and strings, tuples, sets, ...)
 
 Lists
 ~~~~~~
@@ -187,45 +193,78 @@ Dictionaries are a mapping between keys and values:
 
 .. warning:: Keys are not ordered
 
-More collection types
-~~~~~~~~~~~~~~~~~~~~~
+.. note:: Dictionnaries are an essential data structure
 
-* Sets: non ordered, unique items:
+    For instance to store precomputed values.
+
+Strings
+~~~~~~~~
+
+Strings are collections too:
 
   .. sourcecode:: ipython
 
-    In [32]: s = set(('a', 'b', 'c', 'a'))
+    In [32]: s = 'Python is cool'
 
-    In [33]: s
-    Out[33]: set(['a', 'b', 'c'])
+    In [33]: s[-4:]
+    Out[33]: 'cool'
 
-    In [34]: s.difference(('a', 'b'))
-    Out[34]: set(['c'])
+And they have many useful methods:
+
+  .. sourcecode:: ipython
+
+    In [34]: s.replace('cool', 'powerful')
+    Out[34]: 'Python is powerful'
+
+.. warning:: Strings are not mutable
+
+String substitution:
+
+  .. sourcecode:: ipython
+
+    In [35]: 'An integer: %i; a float: %f; another string: %s' % (1, 0.1, 'string')
+    Out[35]: 'An integer: 1; a float: 0.100000; another string: string'
+
+
+More collection types
+~~~~~~~~~~~~~~~~~~~~~
+
+* **Sets:** non ordered, unique items:
+
+  .. sourcecode:: ipython
+
+    In [36]: s = set(('a', 'b', 'c', 'a'))
+
+    In [37]: s
+    Out[37]: set(['a', 'b', 'c'])
+
+    In [38]: s.difference(('a', 'b'))
+    Out[38]: set(['c'])
 
   Sets cannot be indexed:
 
   .. sourcecode:: ipython
 
-    In [35]: s[1]
+    In [39]: s[1]
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
 
     TypeError: 'set' object does not support indexing
 
 
-* Tuples: non-mutable lists:
+* **Tuples:** non-mutable lists:
 
   .. sourcecode:: ipython
 
-    In [36]: t = 1, 2
+    In [40]: t = 1, 2
     
-    In [37]: t
-    Out[37]: (1, 2)
+    In [41]: t
+    Out[41]: (1, 2)
     
-    In [38]: t[1]
-    Out[38]: 2
+    In [42]: t[1]
+    Out[42]: 2
     
-    In [39]: t[1] = 2
+    In [43]: t[1] = 2
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
     

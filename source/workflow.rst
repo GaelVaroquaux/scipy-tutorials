@@ -5,6 +5,9 @@ The workflow: IPython and a text editor
 
    **Interactive work to test and understand algorithm**
 
+.. note:: Reference document for this section:
+
+    **IPython user manual:** http://ipython.scipy.org/doc/manual/html/
 
 Command line interaction
 =========================

@@ -1,7 +1,7 @@
 Control Flow
 ============
 
-Control the order in which the code is executed.
+Controls the order in which the code is executed.
 
 if/else
 --------
@@ -9,7 +9,7 @@ if/else
 .. sourcecode:: ipython
   
     In [1]: if 2**2 == 4:
-       ...:         print 'Totology'
+       ...:         print('Totology')
        ...: 
     Totology
 
@@ -21,11 +21,11 @@ if/else
     In [2]: a = 10
     
     In [3]: if a == 1:
-       ...:         print 1
+       ...:         print(1)
        ...: elif a == 2:
-       ...:         print 2
+       ...:         print(2)
        ...: else:
-       ...:         print 'A lot'
+       ...:         print('A lot')
        ...: 
     A lot
 
@@ -37,7 +37,7 @@ Iterating with an index:
 .. sourcecode:: ipython
 
     In [4]: for i in range(4):
-       ...:         print i
+       ...:         print(i)
        ...: 
     0
     1
@@ -49,7 +49,7 @@ But most often, it is more readable to iterate over values:
 .. sourcecode:: ipython
 
     In [5]: for word in ('cool', 'powerful', 'readable'):
-       ...:         print 'Python is', word
+       ...:         print('Python is %s' % word)
        ...: 
     Python is cool
     Python is powerful
@@ -119,7 +119,7 @@ Iterate over any *sequence*
 
     In [12]: for i in 'powerful':
        ....:     if i in vowels:
-       ....:         print i,
+       ....:         print(i,)
        ....:         
        ....:         
     o e u
@@ -137,7 +137,7 @@ item number.
   .. sourcecode:: ipython
 
     In [13]: for i in range(0, len(words)):
-       ....:     print i, words[i]
+       ....:     print(i, words[i])
        ....:     
        ....:     
     0 cool
@@ -149,7 +149,7 @@ item number.
   .. sourcecode:: ipython
 
     In [14]: for index, item in enumerate(words):
-       ....:     print index, item
+       ....:     print(index, item)
        ....:     
        ....:     
     0 cool
@@ -166,7 +166,7 @@ Use **iteritems**:
     In [15]: d = {'a': 1, 'b':1.2, 'c':1j}
 
     In [15]: for key, val in d.iteritems():
-       ....:     print 'Key:', key, 'has value:', val
+       ....:     print('Key: %s has value: %s' % (key, val))
        ....:     
        ....:     
     Key: a has value: 1
@@ -181,4 +181,24 @@ List Comprehensions
    Do we want to introduce list comprehensions?
 
    Gael: Yes, I believe
+
+.. topic:: Excercise
+
+    Compute the decimals of Pi using the Bailey–Borwein–Plouffe formula:
+
+    ..  matplotlib's mathtext does not allow for control of the dpi.
+
+    .. 
+     .. math::
+ 	:fontset: stixsans
+ 
+	\pi =  4 \sum_{k=0}^{\infty} \frac{1}{16^k} (
+		    \frac{4}{8k + 1}
+		  - \frac{2}{8k + 4}
+		  - \frac{1}{8k + 5}
+		  - \frac{1}{8k + 6}
+		  )
+
+    .. image:: pi_formula.png
+	:align: center
 

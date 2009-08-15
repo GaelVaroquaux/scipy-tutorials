@@ -2,6 +2,11 @@
 Introduction to the Python language
 ====================================
 
+.. note:: Reference document for this section:
+
+    **Python tutorial:** http://docs.python.org/tutorial/
+
+
 .. toctree::
     :maxdepth: 1
 
