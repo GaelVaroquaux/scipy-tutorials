@@ -49,9 +49,6 @@ Or we can read the entire file into a list:
 
     In [75]: fp = open("datafile.txt")
 
-    In [76]: all_lines = fp.readli
-    fp.readline   fp.readlines  
-
     In [76]: all_lines = fp.readlines()
 
     In [77]: all_lines
