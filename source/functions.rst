@@ -274,3 +274,18 @@ Functions attached to objects.
 
 .. todo::  Simple introduction to methods
 
+.. topic:: Exercice
+
+    Implement the quicksort algorithm, as defined by wikipedia::
+
+	function quicksort(array)
+	    var list less, greater
+	    if length(array) ≤ 1  
+		return array  
+	    select and remove a pivot value pivot from array
+	    for each x in array
+		if x ≤ pivot then append x to less
+		else append x to greater
+	    return concatenate(quicksort(less), pivot, quicksort(greater))
+
+

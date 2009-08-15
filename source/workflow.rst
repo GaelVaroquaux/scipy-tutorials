@@ -56,6 +56,11 @@ Run it in ipython and explore the resulting variables:
     In [4]: s
     Out[4]: 'Hello word'
 
+    In [5]: %whos
+    Variable   Type    Data/Info
+    ----------------------------
+    s          str     Hello word
+
 ____
 
 .. note:: **From a script to functions**
