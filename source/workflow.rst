@@ -35,8 +35,7 @@ Run it in ipython and explore the resulting variables:
     In [3]: s
     Out[3]: 'Hello word'
 
-From a script to functions
-===================================
+.. note:: **From a script to functions**
 
     * A script is not reusable, functions are.
 
@@ -44,7 +43,6 @@ From a script to functions
 
 
 .. :vim:spell:
-   :vim:spelllang=fr:
 
 
 
