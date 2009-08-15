@@ -200,7 +200,16 @@ Dictionaries are a mapping between keys and values:
 Strings
 ~~~~~~~~
 
-Strings are collections too:
+* Different string syntaxes::
+
+    a = 'Mine'
+    a = "Chris's"
+    a = '''Mine
+	   and not his'''
+    a = """Mine
+	   and Chris's"""
+
+* Strings are collections too:
 
   .. sourcecode:: ipython
 
@@ -209,7 +218,7 @@ Strings are collections too:
     In [33]: s[-4:]
     Out[33]: 'cool'
 
-And they have many useful methods:
+* And they have many useful methods:
 
   .. sourcecode:: ipython
 
@@ -218,7 +227,7 @@ And they have many useful methods:
 
 .. warning:: Strings are not mutable
 
-String substitution:
+* String substitution:
 
   .. sourcecode:: ipython
 
