@@ -184,7 +184,7 @@ List Comprehensions
 
 .. topic:: Excercise
 
-    Compute the decimals of Pi using the Bailey–Borwein–Plouffe formula:
+    Compute the decimals of Pi using the Wallis formula:
 
     ..  matplotlib's mathtext does not allow for control of the dpi.
 
@@ -192,12 +192,7 @@ List Comprehensions
      .. math::
  	:fontset: stixsans
  
-	\pi =  4 \sum_{k=0}^{\infty} \frac{1}{16^k} (
-		    \frac{4}{8k + 1}
-		  - \frac{2}{8k + 4}
-		  - \frac{1}{8k + 5}
-		  - \frac{1}{8k + 6}
-		  )
+	\pi = \prod_1^\infty \frac{4 i^2}{4 i^2 - 1} 
 
     .. image:: pi_formula.png
 	:align: center
