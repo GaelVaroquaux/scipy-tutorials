@@ -16,6 +16,24 @@ Start `ipython`:
     In [1]: print('Hello world')
     Hello world
 
+Getting help:
+
+.. sourcecode:: ipython
+
+    In [2]: print?
+    Type:		builtin_function_or_method
+    Base Class:	        <type 'builtin_function_or_method'>
+    String Form:	<built-in function print>
+    Namespace:	        Python builtin
+    Docstring:
+	print(value, ..., sep=' ', end='\n', file=sys.stdout)
+	
+	Prints the values to a stream, or to sys.stdout by default.
+	Optional keyword arguments:
+	file: a file-like object (stream); defaults to the current sys.stdout.
+	sep:  string inserted between values, default a space.
+	end:  string appended after the last value, default a newline.
+
 
 Elaboration of the algorithm in an editor
 ===========================================
@@ -29,11 +47,13 @@ Run it in ipython and explore the resulting variables:
 
 .. sourcecode:: ipython
 
-    In [2]: %run my_file.py
+    In [3]: %run my_file.py
     Hello word
 
-    In [3]: s
-    Out[3]: 'Hello word'
+    In [4]: s
+    Out[4]: 'Hello word'
+
+____
 
 .. note:: **From a script to functions**
 

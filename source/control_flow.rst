@@ -6,75 +6,86 @@ Control the order in which the code is executed.
 if/else
 --------
 
-::
+.. sourcecode:: ipython
   
-    if 2**2 == 4:
-	print 'Totology'
+    In [1]: if 2**2 == 4:
+       ...:         print 'Totology'
+       ...: 
+    Totology
+
 
 **Blocks are delimited by indentation**
 
-::
+.. sourcecode:: ipython
 
-    a = 1
-    if a == 1:
-	print 1
-    elif a == 2:
-	print 2
-    else:
-	print 'A lot'
+    In [2]: a = 10
+    
+    In [3]: if a == 1:
+       ...:         print 1
+       ...: elif a == 2:
+       ...:         print 2
+       ...: else:
+       ...:         print 'A lot'
+       ...: 
+    A lot
 
 for/range
 ----------
 
-Iterating with an index::
-
-    for i in range(10):
-	print i
-
-But most often, it is more readable to iterate over values::
-
-    for word in ('cool', 'powerful', 'readable'):
-	print 'Python is', word
-
-    
-while/break/continue
----------------------
-
-Typical C-style while loop:
+Iterating with an index:
 
 .. sourcecode:: ipython
 
-    In [3]: words = ('cool', 'powerful', 'readable')
+    In [4]: for i in range(4):
+       ...:         print i
+       ...: 
+    0
+    1
+    2
+    3
 
-    In [4]: i = 0
+But most often, it is more readable to iterate over values:
 
-    In [5]: while i < len(words):
-       ...:     print 'Python is', words[i]
-       ...:     i += 1
-       ...:     
-       ...:     
+.. sourcecode:: ipython
+
+    In [5]: for word in ('cool', 'powerful', 'readable'):
+       ...:         print 'Python is', word
+       ...: 
     Python is cool
     Python is powerful
     Python is readable
+
+
+while/break/continue
+---------------------
+
+Typical C-style while loop (Mandelbrot problem):
+
+.. sourcecode:: ipython
+
+    In [6]: z = 1 + 1j
+
+    In [7]: while abs(z) < 100:
+       ...:     z = z**2 + 1
+       ...:     
+
+    In [8]: z
+    Out[8]: (-134+352j)
+
 
 *break* out of enclosing for/while loop:
 
 .. sourcecode:: ipython
 
-    In [30]: words = ['cool', 'powerful', 'readable']
+    In [9]: z = 1 + 1j
 
-    In [31]: i = 0
-
-    In [32]: while i < len(words):
-       ....:     curr_word = words[i]
-       ....:     if curr_word == 'powerful':
-       ....:         print curr_word.upper()
+    In [10]: while abs(z) < 100:
+       ....:     if z.imag == 0:
        ....:         break
-       ....:     print curr_word
-       ....:     i += 1
-       ....: 
-    cool
-    POWERFUL
+       ....:     z = z**2 + 1
+       ....:     
+       ....:     
+
 
 *continue* the next iteration of a loop.
 
@@ -94,14 +105,19 @@ Evaluate to False:
   * any empty sequence
 
 
+Advanced iteration
+-------------------------
+
 Iterate over any *sequence*
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can iterate over any sequence (string, list, dictionary, file, ...)
+* You can iterate over any sequence (string, list, dictionary, file, ...)
 
-.. sourcecode:: ipython
+  .. sourcecode:: ipython
 
-    In [50]: for i in 'powerful':
+    In [11]: vowels = 'aeiouy'
+
+    In [12]: for i in 'powerful':
        ....:     if i in vowels:
        ....:         print i,
        ....:         
@@ -110,14 +126,17 @@ You can iterate over any sequence (string, list, dictionary, file, ...)
 
 .. warning:: Not safe to modify the sequence you are iterating over.
 
+Keeping track of enumeration number
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Common task is to iterate over a sequence while keeping track of the
 item number.
 
-Could use while loop with a counter as above. Or a for loop:
+* Could use while loop with a counter as above. Or a for loop:
 
-.. sourcecode:: ipython
+  .. sourcecode:: ipython
 
-    In [52]: for i in range(0, len(words)):
+    In [13]: for i in range(0, len(words)):
        ....:     print i, words[i]
        ....:     
        ....:     
@@ -125,11 +144,11 @@ Could use while loop with a counter as above. Or a for loop:
     1 powerful
     2 readable
 
-But Python provides **enumerate** for this:
+* But Python provides **enumerate** for this:
 
-.. sourcecode:: ipython
+  .. sourcecode:: ipython
 
-    In [53]: for i, item in enumerate(words):
+    In [14]: for i, item in enumerate(words):
        ....:     print i, item
        ....:     
        ....:     
@@ -137,13 +156,16 @@ But Python provides **enumerate** for this:
     1 powerful
     2 readable
 
-Looping over a dictionary, use **iteritems**:
+Looping over a dictionary
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use **iteritems**:
 
 .. sourcecode:: ipython
 
-    In [54]: d = {'a': 1, 'b':1.2, 'c':1j}
+    In [15]: d = {'a': 1, 'b':1.2, 'c':1j}
 
-    In [55]: for key, val in d.iteritems():
+    In [15]: for key, val in d.iteritems():
        ....:     print 'Key:', key, 'has value:', val
        ....:     
        ....:     
@@ -157,4 +179,6 @@ List Comprehensions
 .. todo::
 
    Do we want to introduce list comprehensions?
+
+   Gael: Yes, I believe
 
