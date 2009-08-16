@@ -56,7 +56,7 @@ Numbers
     In [11]: float(1)
     Out[11]: 1.
 
-.. topic:: Excercise:
+.. topic:: Exercise:
 
     Compare two approximations of pi: 22/7 and 355/113
 

@@ -173,3 +173,5 @@ ____
 
     Implement a script that takes a directory name as argument, and
     returns the list of '.py' files, sorted by name length.
+
+    **Hint:** try to understand the docstring of list.sort

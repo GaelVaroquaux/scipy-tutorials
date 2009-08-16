@@ -182,7 +182,7 @@ List Comprehensions
 
    Gael: Yes, I believe
 
-.. topic:: Excercise
+.. topic:: Exercise
 
     Compute the decimals of Pi using the Wallis formula:
 
@@ -192,7 +192,7 @@ List Comprehensions
      .. math::
  	:fontset: stixsans
  
-	\pi = \prod_1^\infty \frac{4 i^2}{4 i^2 - 1} 
+	\pi = 2\prod_1^\infty \frac{4 i^2}{4 i^2 - 1} 
 
     .. image:: pi_formula.png
 	:align: center

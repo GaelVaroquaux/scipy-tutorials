@@ -274,7 +274,7 @@ Functions attached to objects.
 
 .. todo::  Simple introduction to methods
 
-.. topic:: Exercice
+.. topic:: Exercise
 
     Implement the quicksort algorithm, as defined by wikipedia::
 
