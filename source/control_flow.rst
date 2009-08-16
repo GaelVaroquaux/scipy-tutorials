@@ -96,13 +96,46 @@ Typical C-style while loop (Mandelbrot problem):
 Conditional Expressions
 -----------------------
 
-Evaluate to True:
-  * any non-zero value
-  * any sequence with a length > 0
+* `if object`
 
-Evaluate to False:
-  * any zero value
-  * any empty sequence
+  Evaluates to True:
+    * any non-zero value
+    * any sequence with a length > 0
+
+  Evaluates to False:
+    * any zero value
+    * any empty sequence
+
+* `a == b`
+
+  Tests equality, with logics:
+
+  .. sourcecode:: ipython
+
+    In [19]: 1 == 1.
+    Out[19]: True
+
+* `a is b`
+
+  Tests identity: both objects are the same
+
+  .. sourcecode:: ipython
+
+    In [20]: 1 is 1.
+    Out[20]: False
+
+    In [21]: a = 1
+
+    In [22]: b = 1
+
+    In [23]: a is b
+    Out[23]: True
+
+* `a in b`
+
+  For any collection `b`: `b` contains `a`
+
+  If `b` is a dictionnary, this tests that `a` is a key of `b`.
 
 
 Advanced iteration
@@ -119,7 +152,7 @@ Iterate over any *sequence*
 
     In [12]: for i in 'powerful':
        ....:     if i in vowels:
-       ....:         print(i,)
+       ....:         print i,
        ....:         
        ....:         
     o e u

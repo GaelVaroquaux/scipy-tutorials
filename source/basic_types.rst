@@ -126,14 +126,31 @@ Lists
     In [22]: r
     Out[22]: [5, 4, 3, 2, 1, 3.5]
 
+  Extend a list with another list (in-place):
+
+  .. sourcecode:: ipython
+
+    In [23]: l.extend([6, 7])
+
+    In [24]: l
+    Out[24]: [1, 2, 3, 4, 5, 6, 7]
+
+  Concatenate two lists:
+
+  .. sourcecode:: ipython
+
+    In [25]: r + l
+    Out[25]: [5, 4, 3, 2, 1, 3.5, 1, 2, 3, 4, 5, 6, 7]
+ 
+
   Sort `r`:
 
   .. sourcecode:: ipython
 
-    In [23]: r.sort()
+    In [26]: r.sort()
 
-    In [24]: r
-    Out[24]: [1, 2, 3, 3.5, 4, 5]
+    In [27]: r
+    Out[27]: [1, 2, 3, 3.5, 4, 5]
 
 .. note:: **Methods:**
     
@@ -150,7 +167,7 @@ Lists
 
     .. sourcecode:: ipython
 
-	In [25]: r.
+	In [28]: r.
 	r.__add__           r.__iadd__          r.__setattr__
 	r.__class__         r.__imul__          r.__setitem__
 	r.__contains__      r.__init__          r.__setslice__
@@ -175,21 +192,21 @@ Dictionaries are a mapping between keys and values:
 
   .. sourcecode:: ipython
 
-    In [26]: d = {'a': 1, 'b':1.2, 'c':1j}
+    In [29]: d = {'a': 1, 'b':1.2, 'c':1j}
 
-    In [27]: d['b']
-    Out[27]: 1.2
+    In [30]: d['b']
+    Out[30]: 1.2
 
-    In [28]: d['d'] = 'd'
+    In [31]: d['d'] = 'd'
 
-    In [29]: d
-    Out[29]: {'a': 1, 'b': 1.2, 'c': 1j, 'd': 'd'}
+    In [32]: d
+    Out[32]: {'a': 1, 'b': 1.2, 'c': 1j, 'd': 'd'}
 
-    In [30]: d.keys()
-    Out[30]: ['a', 'c', 'b', 'd']
+    In [33]: d.keys()
+    Out[33]: ['a', 'c', 'b', 'd']
 
-    In [31]: d.values()
-    Out[31]: [1, 1j, 1.2, 'd']
+    In [34]: d.values()
+    Out[34]: [1, 1j, 1.2, 'd']
 
 .. warning:: Keys are not ordered
 
@@ -213,17 +230,17 @@ Strings
 
   .. sourcecode:: ipython
 
-    In [32]: s = 'Python is cool'
+    In [35]: s = 'Python is cool'
 
-    In [33]: s[-4:]
-    Out[33]: 'cool'
+    In [36]: s[-4:]
+    Out[36]: 'cool'
 
 * And they have many useful methods:
 
   .. sourcecode:: ipython
 
-    In [34]: s.replace('cool', 'powerful')
-    Out[34]: 'Python is powerful'
+    In [37]: s.replace('cool', 'powerful')
+    Out[37]: 'Python is powerful'
 
 .. warning:: Strings are not mutable
 
@@ -231,8 +248,8 @@ Strings
 
   .. sourcecode:: ipython
 
-    In [35]: 'An integer: %i; a float: %f; another string: %s' % (1, 0.1, 'string')
-    Out[35]: 'An integer: 1; a float: 0.100000; another string: string'
+    In [38]: 'An integer: %i; a float: %f; another string: %s' % (1, 0.1, 'string')
+    Out[38]: 'An integer: 1; a float: 0.100000; another string: string'
 
 
 More collection types
@@ -242,19 +259,19 @@ More collection types
 
   .. sourcecode:: ipython
 
-    In [36]: s = set(('a', 'b', 'c', 'a'))
+    In [39]: s = set(('a', 'b', 'c', 'a'))
 
-    In [37]: s
-    Out[37]: set(['a', 'b', 'c'])
+    In [40]: s
+    Out[40]: set(['a', 'b', 'c'])
 
-    In [38]: s.difference(('a', 'b'))
-    Out[38]: set(['c'])
+    In [41]: s.difference(('a', 'b'))
+    Out[41]: set(['c'])
 
   Sets cannot be indexed:
 
   .. sourcecode:: ipython
 
-    In [39]: s[1]
+    In [42]: s[1]
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
 
@@ -265,15 +282,15 @@ More collection types
 
   .. sourcecode:: ipython
 
-    In [40]: t = 1, 2
+    In [43]: t = 1, 2
     
-    In [41]: t
-    Out[41]: (1, 2)
+    In [44]: t
+    Out[44]: (1, 2)
     
-    In [42]: t[1]
-    Out[42]: 2
+    In [45]: t[1]
+    Out[45]: 2
     
-    In [43]: t[1] = 2
+    In [46]: t[1] = 2
     ---------------------------------------------------------------------------
     TypeError                                 Traceback (most recent call last)
     
