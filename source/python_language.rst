@@ -16,5 +16,7 @@ Introduction to the Python language
     exceptions.rst
     reusing.rst
     file_io.rst
+    timing_profiling.rst
+    standard_library.rst
 
 

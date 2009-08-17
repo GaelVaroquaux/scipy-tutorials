@@ -17,24 +17,23 @@ Function definition
 Return statement
 ----------------
 
-Functions can optionally return values.
+Functions can *optionally* return values.
 
 .. sourcecode:: ipython
 
-    In [20]: def get_love():
-       ....:     return 'love'
-       ....: 
+    In [6]: def area(radius):
+       ...:     return 3.14 * radius * radius
+       ...: 
 
-    In [21]: get_love()
-    Out[21]: 'love'
+    In [8]: area(1.5)
+    Out[8]: 7.0649999999999995
 
-If there is no return statement, functions return ``None`` by default.
+.. Note:: By default, functions return ``None``.
 
 Parameters
 ----------
-Two kinds of parameters:
 
-1) Mandatory parameters (positional arguments)
+Mandatory parameters (positional arguments)
 
 .. sourcecode:: ipython
 
@@ -45,11 +44,15 @@ Two kinds of parameters:
     In [82]: double_it(3)
     Out[82]: 6
 
-    In [83]: double_it(['scipy', 2009])
-    Out[83]: ['scipy', 2009, 'scipy', 2009]
-   
+    In [83]: double_it()
+    ---------------------------------------------------------------------------
+    TypeError                                 Traceback (most recent call last)
 
-2) Optional parameters (keyword or named arguments)
+    /Users/cburns/src/scipy2009/scipy_2009_tutorial/source/<ipython console> in <module>()
+
+    TypeError: double_it() takes exactly 1 argument (0 given)
+
+Optional parameters (keyword or named arguments)
 
 .. sourcecode:: ipython
 

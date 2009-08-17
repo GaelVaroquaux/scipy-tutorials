@@ -9,10 +9,10 @@ Open a file with the ``open`` function:
 
 .. sourcecode:: ipython
 
-    In [67]: fp = open("datafile.txt")
+    In [67]: fp = open("holy_grail.txt")
 
     In [68]: fp
-    Out[68]: <open file 'datafile.txt', mode 'r' at 0xea1ec0>
+    Out[68]: <open file 'holy_grail.txt', mode 'r' at 0xea1ec0>
 
     In [69]: fp.
     fp.__class__         fp.__new__           fp.fileno            fp.readline
@@ -47,7 +47,7 @@ Or we can read the entire file into a list:
 
 .. sourcecode:: ipython
 
-    In [75]: fp = open("datafile.txt")
+    In [75]: fp = open("holy_grail.txt")
 
     In [76]: all_lines = fp.readlines()
 
@@ -70,7 +70,7 @@ Files are sequences, we can iterate over them:
 
 .. sourcecode:: ipython
 
-    In [81]: fp = open("datafile.txt")
+    In [81]: fp = open("holy_grail.txt")
 
     In [82]: for line in fp:
        ....:     print line
@@ -152,7 +152,7 @@ Often want to open the file, grab the data, then close the file:
 
 .. sourcecode:: ipython
 
-    In [54]: fp = open("datafile.txt")
+    In [54]: fp = open("holy_grail.txt")
 
     In [60]: try:
        ....:     for line in fp:
@@ -172,7 +172,7 @@ With Python 2.5 use the ``with`` statement:
 
     In [65]: from __future__ import with_statement 
 
-    In [66]: with open('datafile.txt') as fp:
+    In [66]: with open('holy_grail.txt') as fp:
        ....:     for line in fp:
        ....:         print line
        ....: 
@@ -203,3 +203,4 @@ user input
     "Monty Python's Flying Circus"
 
 
+.. todo:: ``pickle`` ???
