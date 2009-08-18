@@ -190,17 +190,3 @@ exception is raised, and is more concise than the ``try-finally``.
    The ``from __future__`` line isn't required in Python 2.6
 
 
-user input
-----------
-
-.. todo:: small note about ``raw_input``
-
-.. sourcecode:: ipython
-
-    In [77]: s = raw_input('--> ')
-    --> Monty Python's Flying Circus
-    In [78]: s
-    "Monty Python's Flying Circus"
-
-
-.. todo:: ``pickle`` ???

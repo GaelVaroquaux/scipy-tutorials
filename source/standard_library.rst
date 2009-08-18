@@ -4,11 +4,6 @@
 
 The Python Standard Library: http://docs.python.org/library/index.html
 
-built-in functions
-------------------
-
-.. todo:: May not cover this....
-
 System library
 --------------
 
