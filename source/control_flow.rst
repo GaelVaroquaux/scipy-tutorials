@@ -87,11 +87,8 @@ Typical C-style while loop (Mandelbrot problem):
        ....:     
 
 
-*continue* the next iteration of a loop.
+**Rmk:** *continue* the next iteration of a loop.
 
-.. todo:: 
-   
-   Add continue example.
 
 Conditional Expressions
 -----------------------
@@ -209,11 +206,14 @@ Use **iteritems**:
 List Comprehensions
 -------------------
 
-.. todo::
+.. note:: **List comprehension**
 
-   Do we want to introduce list comprehensions?
+    .. sourcecode:: ipython
 
-   Gael: Yes, I believe
+	In [16]: [i**2 for i in range(4)]
+	Out[16]: [0, 1, 4, 9]
+
+
 
 .. topic:: Exercise
 
