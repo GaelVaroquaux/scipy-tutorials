@@ -273,9 +273,9 @@ Functions are first-class objects, which means they can be:
 Methods
 -------
 
-Functions attached to objects.
+Methods are functions attached to objects.  You've seen these in our
+examples on **lists**, **dictionaries**, **strings**, etc...
 
-.. todo::  Simple introduction to methods
 
 .. topic:: Exercise
 

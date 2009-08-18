@@ -265,4 +265,31 @@ directory:
       238 :     Out[19]: ['holy_grail.txt', 'junk.txt', 'newfile.txt']
       251 : Find all occurences of ``holy_grail.txt`` in files in the current
 
+It's also an excellent tool for testing your regular expressions!
+
+Look for all occurences of ``import os``:
+
+::
+
+    cburns@scipy_2009_tutorial 17:23:49 $ grin "import\sos"
+    ./source/reusing.rst:
+        9 :     In [1]: import os
+    ./source/sphinxext/inheritance_diagram.py:
+       33 : import os
+    ./source/sphinxext/mathmpl.py:
+        1 : import os
+    ./source/sphinxext/plot_directive.py:
+       16 : import os, shutil, imp, pickle
+    ./source/standard_library.rst:
+       63 :     In [9]: import os
+    ./source/tmp.py:
+      229 : import os
+
+
+Exercise
+--------
+
+Write a simple version of **which** in Python. Your program should
+check each directory on the caller's path (in order) to find an
+executable program that has the name given to it on the command line.
 
