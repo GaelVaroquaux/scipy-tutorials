@@ -9,7 +9,7 @@ if/else
 .. sourcecode:: ipython
   
     In [1]: if 2**2 == 4:
-       ...:         print('Totology')
+       ...:     print('Totology')
        ...: 
     Totology
 
@@ -21,11 +21,11 @@ if/else
     In [2]: a = 10
     
     In [3]: if a == 1:
-       ...:         print(1)
+       ...:     print(1)
        ...: elif a == 2:
-       ...:         print(2)
+       ...:     print(2)
        ...: else:
-       ...:         print('A lot')
+       ...:     print('A lot')
        ...: 
     A lot
 
@@ -37,7 +37,7 @@ Iterating with an index:
 .. sourcecode:: ipython
 
     In [4]: for i in range(4):
-       ...:         print(i)
+       ...:     print(i)
        ...: 
     0
     1
@@ -49,7 +49,7 @@ But most often, it is more readable to iterate over values:
 .. sourcecode:: ipython
 
     In [5]: for word in ('cool', 'powerful', 'readable'):
-       ...:         print('Python is %s' % word)
+       ...:     print('Python is %s' % word)
        ...: 
     Python is cool
     Python is powerful
@@ -135,7 +135,7 @@ Conditional Expressions
 
   For any collection `b`: `b` contains `a`
 
-  If `b` is a dictionnary, this tests that `a` is a key of `b`.
+  If `b` is a dictionary, this tests that `a` is a key of `b`.
 
 
 Advanced iteration
@@ -144,7 +144,7 @@ Advanced iteration
 Iterate over any *sequence*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* You can iterate over any sequence (string, list, dictionary, file, ...)
+* You can iterate over any sequence (string, list, dictioary, file, ...)
 
   .. sourcecode:: ipython
 
