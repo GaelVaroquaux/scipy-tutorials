@@ -149,7 +149,7 @@ Iterate over any *sequence*
 
     In [12]: for i in 'powerful':
        ....:     if i in vowels:
-       ....:         print i,
+       ....:         print(i),
        ....:         
        ....:         
     o e u

@@ -4,17 +4,10 @@
 
 The Python Standard Library: http://docs.python.org/library/index.html
 
-System library
+``sys`` module
 --------------
 
 System specific information related to the Python interpreter.
-
-List of command line arguments passed to a Python script:
-
-.. sourcecode:: ipython
-
-   In [100]: sys.argv
-   Out[100]: ['/Users/cburns/local/bin/ipython']
 
 Which version of python are you running and where is it installed:
 
@@ -29,6 +22,13 @@ Which version of python are you running and where is it installed:
 
     In [119]: sys.prefix
     Out[119]: '/Library/Frameworks/Python.framework/Versions/2.5'
+
+List of command line arguments passed to a Python script:
+
+.. sourcecode:: ipython
+
+   In [100]: sys.argv
+   Out[100]: ['/Users/cburns/local/bin/ipython']
 
 
 ``sys.path`` is a list of strings that specifies the search path for
@@ -143,16 +143,16 @@ Delete a file:
 
 .. sourcecode:: ipython
 
-    In [44]: fp = open('junkfile.txt', 'w')
+    In [44]: fp = open('junk.txt', 'w')
 
     In [45]: fp.close()
 
-    In [46]: 'junkfile.txt' in os.listdir(os.curdir)
+    In [46]: 'junk.txt' in os.listdir(os.curdir)
     Out[46]: True
 
-    In [47]: os.remove('junkfile.txt')
+    In [47]: os.remove('junk.txt')
 
-    In [48]: 'junkfile.txt' in os.listdir(os.curdir)
+    In [48]: 'junk.txt' in os.listdir(os.curdir)
     Out[48]: False
 
 Path manipulations
@@ -232,59 +232,9 @@ Find all files ending in ``.txt``:
     In [19]: glob.glob('*.txt')
     Out[19]: ['holy_grail.txt', 'junk.txt', 'newfile.txt']
 
-* copy
-* subprocess
 
-My favorite utility
--------------------
+.. topic:: Exercise
 
-``grin`` is an awesome tool for searching files and directories at the
-command line.  Replacement for ``grep`` and ``find``.
+    Write a program to search your PYTHONPATH for the module ``site.py``.
 
-Download: http://pypi.python.org/pypi/grin
-
-Find all occurences of ``holy_grail.txt`` in files in the current
-directory:
-
-::
-
-    cburns@scipy_2009_tutorial 17:09:01 $ grin 'holy_grail.txt'
-    ./source/file_io.rst:
-       12 :     In [67]: fp = open("holy_grail.txt")
-       15 :     Out[68]: <open file 'holy_grail.txt', mode 'r' at 0xea1ec0>
-       50 :     In [75]: fp = open("holy_grail.txt")
-       73 :     In [81]: fp = open("holy_grail.txt")
-      155 :     In [54]: fp = open("holy_grail.txt")
-      175 :     In [66]: with open('holy_grail.txt') as fp:
-    ./source/standard_library.rst:
-      238 :     Out[19]: ['holy_grail.txt', 'junk.txt', 'newfile.txt']
-      251 : Find all occurences of ``holy_grail.txt`` in files in the current
-
-It's also an excellent tool for testing your regular expressions!
-
-Look for all occurences of ``import os``:
-
-::
-
-    cburns@scipy_2009_tutorial 17:23:49 $ grin "import\sos"
-    ./source/reusing.rst:
-        9 :     In [1]: import os
-    ./source/sphinxext/inheritance_diagram.py:
-       33 : import os
-    ./source/sphinxext/mathmpl.py:
-        1 : import os
-    ./source/sphinxext/plot_directive.py:
-       16 : import os, shutil, imp, pickle
-    ./source/standard_library.rst:
-       63 :     In [9]: import os
-    ./source/tmp.py:
-      229 : import os
-
-
-Exercise
---------
-
-Write a simple version of **which** in Python. Your program should
-check each directory on the caller's path (in order) to find an
-executable program that has the name given to it on the command line.
 

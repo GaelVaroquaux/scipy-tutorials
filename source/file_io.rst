@@ -86,10 +86,15 @@ File modes
 ----------
 
 * Read-only: ``r``
-* Write-only: ``w``  # Will erase file if it exists or create a new file
+* Write-only: ``w``
+
+  * Note: Create a new file or *overwrite* existing file.
+
 * Append a file: ``a``
 * Read and Write: ``r+``
 * Binary mode: ``b``
+
+  * Note: Use for binary files, especially on Windows.
 
 Writing to a file
 -----------------
@@ -127,14 +132,12 @@ Update a file:
     In [114]: fp.write(line)
 
     In [115]: fp.tell()
-    Out[115]: 63L
+    Out[115]: 64L
 
     In [116]: fp.seek(0)
 
     In [117]: fp.read()
     Out[117]: "CHRIS: I am not a tiny-brained wiper of other people's bottoms!"
-
-    In [130]: fp.seek(0)
 
     In [132]: fp.write("GAEL: I've met your children dear sir, yes you are!\n")
 
@@ -190,3 +193,7 @@ exception is raised, and is more concise than the ``try-finally``.
    The ``from __future__`` line isn't required in Python 2.6
 
 
+.. topic:: Exercise
+
+   Write a function that will load the column of numbers in
+   ``data.txt`` and calculate the min, max and sum values.

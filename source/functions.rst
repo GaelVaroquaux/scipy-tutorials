@@ -7,7 +7,7 @@ Function definition
 .. sourcecode:: ipython
 
     In [56]: def foo():
-       ....:     print 'in foo function'
+       ....:     print('in foo function')
        ....:     
        ....:     
 
@@ -130,8 +130,8 @@ the caller's variable.
     In [1]: def foo(x, y):
        ...:     x = 23
        ...:     y.append(42)
-       ...:	print 'x is', x
-       ...:	print 'y is', y
+       ...:	print('x is %d' % x)
+       ...:	print('y is %d' % y)
        ...:     
 
     In [2]: a = 77    # immutable variable
@@ -179,7 +179,7 @@ This doesn't work:
 
     In [117]: def setx(y):
        .....:     x = y
-       .....:     print 'x is', x
+       .....:     print('x is %d' % x)
        .....:     
        .....:     
 
@@ -196,7 +196,7 @@ This works:
     In [121]: def setx(y):
        .....:     global x
        .....:     x = y
-       .....:     print 'x is', x
+       .....:     print('x is %d' % x)
        .....:     
        .....:     
 

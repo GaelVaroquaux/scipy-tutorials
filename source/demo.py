@@ -7,3 +7,7 @@ def print_b():
 def print_a():
     " Prints a "
     print('a')
+    
+
+c = 2
+d = 2
