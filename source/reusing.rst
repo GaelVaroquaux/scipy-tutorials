@@ -175,3 +175,5 @@ ____
     returns the list of '.py' files, sorted by name length.
 
     **Hint:** try to understand the docstring of list.sort
+
+:ref:`dir_sort`

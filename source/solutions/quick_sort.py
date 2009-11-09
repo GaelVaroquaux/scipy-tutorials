@@ -8,12 +8,18 @@ def qsort(lst):
     if len(lst) <= 1:
         return lst
     pivot, rest    = lst[0], lst[1:]
-    #less_than      = [ lt for lt in rest if lt < pivot ]
+
+    # Could use list comprehension:
+    # less_than      = [ lt for lt in rest if lt < pivot ]
+
     less_than = []
     for lt in rest:
         if lt < pivot:
             less_than.append(lt)
-    #greater_equal  = [ ge for ge in rest if ge >= pivot ]
+
+    # Could use list comprehension:
+    # greater_equal  = [ ge for ge in rest if ge >= pivot ]
+
     greater_equal = []
     for ge in rest:
         if ge >= pivot:
@@ -24,11 +30,3 @@ def qsort(lst):
 assert qsort(range(10)) == range(10)
 assert qsort(range(10)[::-1]) == range(10)
 assert qsort([1, 4, 2, 5, 3]) == sorted([1, 4, 2, 5, 3])
-
-"""
-x = range(10)
-import random
-random.shuffle(x)
-print 'x is:', x
-print 'qsorted:', qsort(x)
-"""

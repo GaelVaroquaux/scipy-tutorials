@@ -34,6 +34,9 @@ html:	test
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
 	@echo
 	@echo "Build finished. The HTML pages are in build/html."
+	mkdir -p build/html/solutions
+	cp -r source/solutions/*.py build/html/solutions
+	cp -r source/solutions/*.txt build/html/solutions
 
 pickle:
 	mkdir -p build/pickle build/doctrees

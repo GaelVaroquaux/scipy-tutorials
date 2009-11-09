@@ -291,4 +291,4 @@ examples on **lists**, **dictionaries**, **strings**, etc...
 		else append x to greater
 	    return concatenate(quicksort(less), pivot, quicksort(greater))
 
-
+:ref:`quick_sort`

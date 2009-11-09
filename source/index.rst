@@ -43,6 +43,15 @@ Installing with distributions:
     * *Beginning Python visualization*,
       Shai Vaingast, Apress
 
+    * *Python Cookbook*,
+      David Ascher, Matt Margolin, Alex Martelli, O'Reilly
+
+
+:Presenters:
+
+    * Gael Varoquaux: gael *dot* varoquaux *at* normalesup *dot* org
+    * Christopher Burns: cburns *at* berkeley *dot* edu
+
 __________
 
 
@@ -50,12 +59,17 @@ __________
     
     <b>Layout of the tutorial</b>
 
+.. note:: 
+
+   Solutions for the *Exercises* are in the ``solutions`` directory and
+   linked to in the documentation after each *Exercise*.
 
 .. toctree::
     :maxdepth: 2
 
     workflow.rst
     python_language.rst
+    debugging.rst
 
 .. raw:: latex
 

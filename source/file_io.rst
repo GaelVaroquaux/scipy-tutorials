@@ -197,3 +197,6 @@ exception is raised, and is more concise than the ``try-finally``.
 
    Write a function that will load the column of numbers in
    ``data.txt`` and calculate the min, max and sum values.
+
+:ref:`data_file`
+

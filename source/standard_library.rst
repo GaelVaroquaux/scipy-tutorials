@@ -237,4 +237,4 @@ Find all files ending in ``.txt``:
 
     Write a program to search your PYTHONPATH for the module ``site.py``.
 
-
+:ref:`path_site`

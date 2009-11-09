@@ -219,14 +219,7 @@ List Comprehensions
 
     Compute the decimals of Pi using the Wallis formula:
 
-    ..  matplotlib's mathtext does not allow for control of the dpi.
-
-    .. 
-     .. math::
- 	:fontset: stixsans
- 
-	\pi = 2\prod_1^\infty \frac{4 i^2}{4 i^2 - 1} 
-
     .. image:: pi_formula.png
 	:align: center
 
+:ref:`pi_wallis`
