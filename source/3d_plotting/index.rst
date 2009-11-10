@@ -20,8 +20,4 @@ __________
     interaction.rst
 
 
-.. raw:: latex
-
-   \twocolumn
-
 

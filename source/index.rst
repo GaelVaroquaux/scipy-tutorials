@@ -58,8 +58,4 @@ __________
     advanced_numpy/index.rst
     tips/pyflakes.rst
 
-.. raw:: latex
-
-   \twocolumn
-
 

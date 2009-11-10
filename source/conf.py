@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Introduction to Python for Science'
-copyright = u'2009, Chris Burns and Gaël Varoquaux'
+copyright = u'2009, Gaël Varoquaux'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -181,7 +181,7 @@ htmlhelp_basename = 'python4science'
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
   ('index', 'python4science.tex', ur'Introduction to Python for Science',
-   ur'Chris Burns and Gaël Varoquaux', 'manual'),
+   ur'Gaël Varoquaux', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -210,7 +210,7 @@ latex_preamble = """
 latex_elements = {
     'classoptions': ',oneside,openany',
     'babel': '\usepackage[english]{babel}',
-    'tableofcontents': '%\\tableofcontents',
+    'tableofcontents': '\\tableofcontents',
 } 
 
 # Example configuration for intersphinx: refer to the Python standard library.
