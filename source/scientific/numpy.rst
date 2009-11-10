@@ -215,7 +215,7 @@ Multidimensional operations
     array([[ 3.,  3.,  3.],
            [ 3.,  3.,  3.]])
 
-* Dimensions are matched::
+* Dimensions are matched:
 
 .. image:: broadcasting.jpg
     :align: center

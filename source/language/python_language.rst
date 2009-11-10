@@ -17,6 +17,5 @@ Introduction to the Python language
     reusing.rst
     file_io.rst
     standard_library.rst
-    timing_profiling.rst
 
 

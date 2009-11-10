@@ -50,10 +50,10 @@ __________
     :maxdepth: 2
 
     workflow.rst
-    python_language.rst
-    debugging.rst
+    language/python_language.rst
     scientific/index.rst
     3d_plotting/index.rst
+    debugging.rst
     profiling/index.rst
     advanced_numpy/index.rst
     tips/pyflakes.rst
