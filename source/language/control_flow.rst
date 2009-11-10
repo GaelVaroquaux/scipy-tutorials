@@ -206,9 +206,7 @@ Use **iteritems**:
 List Comprehensions
 -------------------
 
-.. note:: **List comprehension**
-
-    .. sourcecode:: ipython
+.. sourcecode:: ipython
 
 	In [16]: [i**2 for i in range(4)]
 	Out[16]: [0, 1, 4, 9]
