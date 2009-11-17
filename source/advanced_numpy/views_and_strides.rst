@@ -124,11 +124,8 @@ Reshaping can be a special case of views.
 
 * You can do unusual operations on arrays along certain strides:
 
-  .. plot:: reshape_bin.py
+  .. plot:: pyplots/reshape_bin.py
       :include-source:
-      :hide-links:
-      :scale: 50
-      :align: left 
 
 
 * To understand this better, let us consider what happens to the first

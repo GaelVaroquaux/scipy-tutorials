@@ -17,7 +17,7 @@ Array computing
     +--------------------------+-------------------------------------+
     | Python                   | numpy                               |
     +--------------------------+-------------------------------------+
-    | List:  `a = [1, 2, 3]`   | Tableau:  `a = np.array([1, 2, 3])` |
+    | List:  `a = [1, 2, 3]`   | Array:    `a = np.array([1, 2, 3])` |
     +--------------------------+-------------------------------------+
 
 Doing operations on many numbers
@@ -38,7 +38,7 @@ Doing operations on many numbers
     1000 loops, best of 3: 314 us per loop
 
 
-* Vector computing: loops are replace by vector operations, on arrays
+* Vector computing: loops are replaced by vector operations, on arrays
 
   ::
 
@@ -94,10 +94,26 @@ Creating arrays
     array([[ 0.+0.j,  0.+1.j],
            [ 1.+0.j,  1.+1.j]])
 
+Views and copies
+--------------------
+
+::
+
+    >>> x = np.zeros(10)
+    array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])
+    >>> x[0] = 1
+    >>> x
+    array([ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])
+    >>> y = x.copy()
+    >>> y[0] = 2
+    >>> x
+    array([ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])
+
+
 Slicing
 ---------
 
-Multidimensionel traversing arrays
+Multidimensional traversing of arrays
 
 .. image:: numpy_indexing.png
    :align: center
@@ -120,19 +136,17 @@ An example: calculating the laplacian
     In [4]: l = sp.lena()
     In [5]: pl.imshow(l, cmap=pl.cm.gray())
     In [6]: e = l[:-2, 1:-1] - l[2:, 1:-1] + l[1:-1, :-2] - l[1:-1, 2:]
-    In [7]: pl.imshow(e, pl.cm.gray())
+    In [7]: pl.imshow(e, cmap=pl.cm.gray())
 
 
-.. plot:: lena_laplacien.py 
-    :hide-links:
-    :align: center
+.. plot:: pyplots/lena_laplacien.py 
 
 ____
 
-.. figure:: timings.jpg
+.. figure:: timings.png
     :align: center
 
-    **Gains en temps**
+    **Timing ratio**
 
 Advanced indexing
 ==================
@@ -184,10 +198,7 @@ Using masks
     In [12]: pl.imshow(l, cmap=pl.cm.gray)
 
 
-.. plot:: lena_mask.py 
-    :hide-links:
-    :scale: 75
-    :align: center 
+.. plot:: pyplots/lena_mask.py 
 
 
 
@@ -220,11 +231,11 @@ Multidimensional operations
 .. image:: broadcasting.jpg
     :align: center
 
-Pour la performance
--------------------
+Using broadcasting for performance
+-------------------------------------
 
 
-* Creation d'une grille 3D
+* Creating a 3D grid
 
   .. image:: 3d_radius.jpg
     :align: center
@@ -239,7 +250,7 @@ ____
     :align: right
          
 
-:Sans broadcasting:
+:Without broadcasting:
 
       .. raw:: latex
 
@@ -252,16 +263,16 @@ ____
         (200, 200, 200) (200, 200, 200) (200, 200, 200)
         >>> r = np.sqrt(x**2 + y**2 + z**2)
 
-      * Temps : **2.3s**: création de `x`, `y`, `z`: 0.5s, calcul de `r`: 1.8s
+      * Timing: **2.3s**: creating `x`, `y`, `z`: 0.5s, calculation of `r`: 1.8s
 
-      * Mémoire : 64Mo par tableaux, 6 tableaux,
-        (`x`, `y`, `z`, `r`) et 2 temporaires 
+      * Memory : 64Mo per array, 6 arrays,
+        (`x`, `y`, `z`, `r`) and 2 temporary arrays 
 
         => **400Mb**
 
-      * 200^3 opérations élémentaires par opération de tableaux: 
+      * 200^3 floating point operations per array: 
       
-        **48 million d'opérations**.
+        **48 million operations**.
 
 
 ____
@@ -269,7 +280,7 @@ ____
 .. image:: 3d_radius_broadcasting.jpg
     :align: right
          
-:Avec broadcasting:
+:With broadcasting:
 
       .. raw:: latex
 
@@ -282,13 +293,14 @@ ____
         (200, 1, 1) (1, 200, 1) (1, 1, 200)
         >>> r = np.sqrt(x**2 + y**2 + z**2)
 
-      * Temps : **1.1s**: création de `x`, `y`, `z`: 6ms
+      * Timing: **1.1s**: creating `x`, `y`, `z`: 6ms
 
-      * Mémoire: `x`, `y`, `z` : 1.6Kb. `r` : 64Mo, et 1 temporaire de 64Mo
+      * Memory: `x`, `y`, `z` : 1.6Kb. `r` : 64Mo, and one 64Mo temporary
+        array
         
         => **120Mb**
 
-      * **16 million d'opérations** 
+      * **16 million operations** 
 
 .. raw:: html
 
@@ -296,13 +308,13 @@ ____
    &nbsp;
    <br\>
 
-.. topic:: `numpy`: une view structurée sur la mémoire avec des opérations
+.. topic:: `numpy`: a structured view on memory, with associated operations
 
-  * données identiques (`dtype`)
-  * indexage rapide
-  * vue/copies
-  * reshape pas couteux
-  * opérations comprenant la forme des tableaux
+  * identical data type (`dtype`)
+  * fast indexing
+  * views and copies
+  * costless reshape
+  * shape-aware operations (broadcasting)
 
 
 .. :vim:spell:

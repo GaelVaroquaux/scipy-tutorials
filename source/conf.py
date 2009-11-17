@@ -25,8 +25,8 @@ sys.path.append(os.path.abspath('sphinxext'))
 extensions = ['sphinx.ext.autodoc', 
               'sphinx.ext.doctest', 
               'sphinx.ext.todo',
-              #'matplotlib.sphinxext.plot_directive', 
-              'plot_directive',
+              'matplotlib.sphinxext.plot_directive', 
+              #'plot_directive',
               'ipython_console_highlighting',
               'matplotlib.sphinxext.only_directives',
               'matplotlib.sphinxext.mathmpl',
@@ -202,9 +202,21 @@ latex_documents = [
 #latex_use_modindex = True
 
 # Additional stuff for the LaTeX preamble.
-latex_preamble = """
+latex_preamble = r"""
 \definecolor{VerbatimColor}{rgb}{0.95,1,0.833}
 \definecolor{VerbatimBorderColor}{rgb}{0.6,0.6,0.6}
+\usepackage{graphicx}
+\makeatletter
+\def\halflinewidth{.55\linewidth}
+\def\quarterlinewidth{.68\linewidth}
+\def\smalllinewidth{.9\linewidth}
+\def\maxwidth{\ifdim\Gin@nat@height>\quarterlinewidth\halflinewidth
+\else\ifdim\Gin@nat@width>\smalllinewidth\smalllinewidth
+ \else\Gin@nat@width\fi\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth}
+\def\caption#1{\bf #1}
+\renewenvironment{figure}[1][1]{\begin{center}}{\end{center}}
 """
 
 latex_elements = {

@@ -43,13 +43,13 @@ try/except
   .. sourcecode:: ipython
 
     In [8]: while True:
-    ....:     try:
-    ....:         x = int(raw_input('Please enter a number: '))
-    ....:         break
-    ....:     except ValueError:
-    ....:         print('That was no valid number.  Try again...')
-    ....:         
-    ....:         
+     ....:     try:
+     ....:         x = int(raw_input('Please enter a number: '))
+     ....:         break
+     ....:     except ValueError:
+     ....:         print('That was no valid number.  Try again...')
+     ....:         
+     ....:         
     Please enter a number: a
     That was no valid number.  Try again...
     Please enter a number: 1
@@ -63,11 +63,11 @@ try/finally
   .. sourcecode:: ipython
 
     In [10]: try:
-    ....:    x = int(raw_input('Please enter a number: '))
-    ....: finally:
-    ....:    print('Thank you for your input')
-    ....:    
-    ....:    
+     ....:    x = int(raw_input('Please enter a number: '))
+     ....: finally:
+     ....:    print('Thank you for your input')
+     ....:    
+     ....:    
     Please enter a number: a
     Thank you for your input
     ---------------------------------------------------------------------------

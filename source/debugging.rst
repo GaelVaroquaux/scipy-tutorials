@@ -4,14 +4,14 @@
 
 The python debugger ``pdb``: http://docs.python.org/library/pdb.html
 
-Debugging on the brain
-----------------------
+Coding best practices to avoid getting in trouble
+--------------------------------------------------
 
 .. topic:: Brian Kernighan
 
    “Everyone knows that debugging is twice as hard as writing a
    program in the first place. So if you're as clever as you can be
-   when you write it, how will you ever debug it?” (Brian Kernighan)
+   when you write it, how will you ever debug it?”
 
 * We all write buggy code.  Accept it.  Deal with it.
 * Write your code with testing and debugging in mind.
@@ -28,23 +28,6 @@ Debugging on the brain
 * Try to limit interdependencies of your code. (Loose Coupling)
 * Give your variables, functions and modules meaningful names.
 
-
-Strategies
-----------
-
-1. Make it fail reliably.  Find a test case that makes the code fail
-   every time.
-2. Divide and Conquer.  Once you have a failing test case, isolate the
-   failing code.
-
-  * Which module.
-  * Which function.
-  * Which line of code.
-
-3. Change one thing at a time and re-run the failing test case.
-4. Take notes.  It may take a while.
-5. Be patient.  It may take a while.
-6. Fernando Perez's 1/0 trick.
 
 The debugger
 ------------
@@ -120,49 +103,6 @@ Type ``%debug`` and drop into the debugger.
     ipdb> quit
 
     In [8]: 
-
-``%pdb`` magic command
-^^^^^^^^^^^^^^^^^^^^^^
-
-We can have ipython drop into the debugger automatically when
-exceptions are triggered.
-
-.. sourcecode:: ipython
-
-    In [8]: %pdb
-    Automatic pdb calling has been turned ON
-
-    In [9]: run index_error.py
-    ---------------------------------------------------------------------------
-    IndexError                                Traceback (most recent call last)
-
-    /Users/cburns/src/scipy2009/scipy_2009_tutorial/source/index_error.py in <module>()
-          6 
-          7 if __name__ == '__main__':
-    ----> 8     index_error()
-          9 
-         10 
-
-    /Users/cburns/src/scipy2009/scipy_2009_tutorial/source/index_error.py in index_error()
-          3 def index_error():
-          4     lst = list('foobar')
-    ----> 5     print lst[len(lst)]
-          6 
-          7 if __name__ == '__main__':
-
-    IndexError: list index out of range
-    > /Users/cburns/src/scipy2009/scipy_2009_tutorial/source/index_error.py(5)index_error()
-          4     lst = list('foobar')
-    ----> 5     print lst[len(lst)]
-          6 
-
-    ipdb> 
-
-    ipdb> quit
-    WARNING: Failure executing file: <index_error.py>
-
-    In [10]: %pdb
-    Automatic pdb calling has been turned OFF
 
 
 Debugger launch
@@ -382,9 +322,22 @@ print
 Yes, ``print`` statements do work as a debugging tool.
 
 
-Code Checker
-------------
+Debugging strategies
+--------------------
 
-pyflakes: http://pypi.python.org/pypi/pyflakes/0.3.0
+1. Make it fail reliably.  Find a test case that makes the code fail
+   every time.
+2. Divide and Conquer.  Once you have a failing test case, isolate the
+   failing code.
 
-Parses the module and checks for logical errors.
+  * Which module.
+  * Which function.
+  * Which line of code.
+
+3. Change one thing at a time and re-run the failing test case.
+4. Take notes.  It may take a while.
+5. Be patient.  It may take a while.
+6. Purposely raise an exception where you believe the problem is, to
+   inspect the code via the debuger (eg '%debug' in IPython)
+
+

@@ -61,10 +61,6 @@ __________
     matplotlib.rst
     scipy.rst
 
-.. raw:: latex
-
-   \twocolumn
-
 ..
   Indices and tables
   ==================

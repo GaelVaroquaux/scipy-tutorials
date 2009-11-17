@@ -82,4 +82,4 @@ linkcheck:
 
 pdf: latex
 	#cd build/latex ; make all-pdf ; pdftk A=python4science.pdf cat A1 A3-end output python4science_.pdf ; pdfcrop python4science_.pdf ; pdfnup python4science_.pdf
-	cd build/latex ; make all-pdf ; pdfcrop python4science.pdf ; pdfnup python4science-crop.pdf
+	cd build/latex ; make all-pdf ; pdfnup python4science.pdf

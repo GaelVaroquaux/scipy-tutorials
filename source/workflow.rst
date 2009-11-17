@@ -5,6 +5,14 @@ The workflow: IPython and a text editor
 
    **Interactive work to test and understand algorithm**
 
+Python is a general-purpose language. As such, there is not one blessed
+environement to work into, and not only one way of using it. Although
+this makes it harder for beginners to find there way in the beginning, it
+makes it possible for Python to be used to write programs, in web
+servers, or embedded devices. In this introductory chapter, we describe
+an interactive workflow with IPython that is handy to explore and
+understand algorithms.
+
 .. note:: Reference document for this section:
 
     **IPython user manual:** http://ipython.scipy.org/doc/manual/html/
@@ -41,12 +49,15 @@ Getting help:
 Elaboration of the algorithm in an editor
 ===========================================
 
-Edit `my_file.py`::
+Create a file `my_file.py` in a text editor. Under EPD, you can use
+`Scite`, available from the start menu. Under Ubuntu, if you don't
+already have your favorite editor, I would advise installing `Stani's
+Python editor`. In the file, add the following lines::
 
     s = `Hello world`
     print(s) 
 
-Run it in ipython and explore the resulting variables:
+Now, you can run it in ipython and explore the resulting variables:
 
 .. sourcecode:: ipython
 
@@ -63,11 +74,12 @@ Run it in ipython and explore the resulting variables:
 
 ____
 
-.. note:: **From a script to functions**
+.. topic:: **From a script to functions**
 
     * A script is not reusable, functions are.
 
-    * Important: break the process in small blocks.
+    * Thinking in terms of functions helps breaking the problem in small 
+      blocks.
 
 
 .. :vim:spell:

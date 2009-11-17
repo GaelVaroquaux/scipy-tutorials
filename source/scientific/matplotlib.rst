@@ -1,37 +1,36 @@
-============================
-Matplotlib : tracé de courbe
-============================
+====================================
+Matplotlib : scientific 2D plotting
+====================================
+
+Matplotlib: provides a matlab-like plotting interface, `pylab`
+
+.. note:: 
+   
+    **Reference:** the documentation is excellent: 
+    http://matplotlib.sourceforge.net/
 
 Lines
 ======
 
-.. plot:: demo_plot.py
+.. plot:: pyplots/demo_plot.py
    :include-source:
-   :align: center
-   :scale: 75
 
-Tableaux
-=========
+2D arrays
+==========
 
-.. plot:: demo_imshow.py
+.. plot:: pyplots/demo_imshow.py
    :include-source:
-   :align: center
-   :scale: 75
 
 Points
 ======
 
-.. plot:: demo_scatter.py
+.. plot:: pyplots/demo_scatter.py
    :include-source:
-   :align: center
-   :scale: 75
 
-Vecteurs
-========
+Vectors
+=========
 
-.. plot:: demo_quiver.py
+.. plot:: pyplots/demo_quiver.py
    :include-source:
-   :align: center
-   :scale: 75
 
 
