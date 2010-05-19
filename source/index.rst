@@ -52,6 +52,7 @@ __________
     workflow.rst
     language/python_language.rst
     scientific/index.rst
+    py4neuroimage/index.rst
     3d_plotting/index.rst
     debugging.rst
     profiling/index.rst

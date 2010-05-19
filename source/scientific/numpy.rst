@@ -134,9 +134,9 @@ An example: calculating the laplacian
 
     In [3]: import pylab as pl
     In [4]: l = sp.lena()
-    In [5]: pl.imshow(l, cmap=pl.cm.gray())
+    In [5]: pl.imshow(l, cmap=pl.cm.gray)
     In [6]: e = l[:-2, 1:-1] - l[2:, 1:-1] + l[1:-1, :-2] - l[1:-1, 2:]
-    In [7]: pl.imshow(e, cmap=pl.cm.gray())
+    In [7]: pl.imshow(e, cmap=pl.cm.gray)
 
 
 .. plot:: pyplots/lena_laplacien.py 
@@ -183,9 +183,9 @@ Using masks
     >>> a = np.arange(10)
     >>> a
     array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    >>> a[a % 2] = 0
+    >>> a[(a % 2) == 1] = 0
     >>> a
-    array([0, 0, 2, 3, 4, 5, 6, 7, 8, 9])
+    array([1, 3, 5, 7, 9])
 
 * Applying a mask to a grid to select the center of an image:
 
@@ -193,7 +193,7 @@ Using masks
 
     In [8]: n, m = l.shape
     In [9]: x, y = np.indices((n, m))
-    In [10]: distances = np.sqrt((x - 0.5*n)**2 + (y - 0.5*m)**2)
+    In [10]: distance = np.sqrt((x - 0.5*n)**2 + (y - 0.5*m)**2)
     In [11]: l[distance > 200] = 255
     In [12]: pl.imshow(l, cmap=pl.cm.gray)
 
